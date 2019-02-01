@@ -1,5 +1,5 @@
 a:link {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 a:visited {
   text-decoration: none;
@@ -12,4 +12,31 @@ a:active {
 }
 .fa-instagram:hover {
   color: gray;
+}
+.text-black {
+  color: #000000;
+}
+.rotate-img {
+}
+.rotate-img:hover {
+  transform: rotate(-15deg);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  transition: .3s ease;
+}
+/*
+.row {
+  border:ridge 1px red;
+}
+.col-8 {
+  border:ridge 1px blue;
+}
+.col-4 {
+  border:ridge 1px green;
+}
+*/
+.bg-dark {
+  background-color: #000000 !important;
 }
