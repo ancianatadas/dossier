@@ -53,3 +53,6 @@ a:active {
 .bg-dark {
   background-color: #000000 !important;
 }
+.modal-lg {
+  max-width: 1000px !important;
+}

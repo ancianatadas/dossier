@@ -57,58 +57,83 @@
     <h3 class="text-center">Galería</h3>
     <br />
 
+    <!-- Row class
+    ================================================== -->
     <div class="row">
-      <div class="col-6" align="center">
-        <a href="https://ancianatadas.github.io/dossier/vendor/img/galeria/1.jpg">
-          <img src="vendor/img/galeria/1.jpg" width="100%" class="img-fluid">
+
+      <div class="col-4" align="center">
+        <a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="vendor/img/galeria/1.jpg">
+          <img src="vendor/img/galeria/1.jpg" width="100%" class="img-fluid rotate-img">
         </a>
         <br />
         <br />
-        <a href="https://ancianatadas.github.io/dossier/vendor/img/galeria/2.jpg">
-          <img src="vendor/img/galeria/2.jpg" width="100%" class="img-fluid">
+        <a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="vendor/img/galeria/2.jpg">
+          <img src="vendor/img/galeria/2.jpg" width="100%" class="img-fluid rotate-img">
         </a>
         <br />
         <br />
-        <a href="https://ancianatadas.github.io/dossier/vendor/img/galeria/3.jpg">
-          <img src="vendor/img/galeria/3.jpg" width="100%" class="img-fluid">
-        </a>
-        <br />
-        <br />
-        <a href="https://ancianatadas.github.io/dossier/vendor/img/galeria/4.jpg">
-          <img src="vendor/img/galeria/4.jpg" width="100%" class="img-fluid">
-        </a>
-        <br />
-        <br />
-        <a href="https://ancianatadas.github.io/dossier/vendor/img/galeria/5.jpg">
-          <img src="vendor/img/galeria/5.jpg" width="100%" class="img-fluid">
+        <a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="vendor/img/galeria/3.jpg">
+          <img src="vendor/img/galeria/3.jpg" width="100%" class="img-fluid rotate-img">
         </a>
       </div>
-      <div class="col-6" align="center">
-        <a href="https://ancianatadas.github.io/dossier/vendor/img/galeria/6.jpg">
-          <img src="vendor/img/galeria/6.jpg" width="100%" class="img-fluid">
+
+      <div class="col-4" align="center">
+        <a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="vendor/img/galeria/4.jpg">
+          <img src="vendor/img/galeria/4.jpg" width="100%" class="img-fluid rotate-img">
         </a>
         <br />
         <br />
-        <a href="https://ancianatadas.github.io/dossier/vendor/img/galeria/7.jpg">
-          <img src="vendor/img/galeria/7.jpg" width="100%" class="img-fluid">
+        <a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="vendor/img/galeria/5.jpg">
+          <img src="vendor/img/galeria/5.jpg" width="100%" class="img-fluid rotate-img">
         </a>
         <br />
         <br />
-        <a href="https://ancianatadas.github.io/dossier/vendor/img/galeria/8.jpg">
-          <img src="vendor/img/galeria/8.jpg" width="100%" class="img-fluid">
+        <a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="vendor/img/galeria/6.jpg">
+          <img src="vendor/img/galeria/6.jpg" width="100%" class="img-fluid rotate-img">
+        </a>
+      </div>
+
+      <div class="col-4" align="center">
+        <a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="vendor/img/galeria/7.jpg">
+          <img src="vendor/img/galeria/7.jpg" width="100%" class="img-fluid rotate-img">
         </a>
         <br />
         <br />
-        <a href="https://ancianatadas.github.io/dossier/vendor/img/galeria/9.jpg">
-          <img src="vendor/img/galeria/9.jpg" width="100%" class="img-fluid">
+        <a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="vendor/img/galeria/8.jpg">
+          <img src="vendor/img/galeria/8.jpg" width="100%" class="img-fluid rotate-img">
         </a>
         <br />
         <br />
-        <a href="https://ancianatadas.github.io/dossier/vendor/img/galeria/10.jpg">
-          <img src="vendor/img/galeria/10.jpg" width="100%" class="img-fluid">
+        <a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="vendor/img/galeria/9.jpg">
+          <img src="vendor/img/galeria/9.jpg" width="100%" class="img-fluid rotate-img">
         </a>
+        <br />
+        <br />
+        <a href="#" data-toggle="modal" data-target="#exampleModal" data-whatever="vendor/img/galeria/10.jpg">
+          <img src="vendor/img/galeria/10.jpg" width="100%" class="img-fluid rotate-img">
+        </a>
+      </div>
+
+    </div>
+    <!-- Row class end -->
+
+    <!-- Modal
+    ================================================== -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img class="img-fluid">
+          </div>
+        </div>
       </div>
     </div>
+    <!-- Modal end -->
 
     <br />
     <b>Fotografías:</b> Fabricio Martorelli.
@@ -141,5 +166,16 @@
 <script src="vendor/jquery/popper.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <!-- Bootstrap core JavaScript end -->
-
+<script>
+  $('#exampleModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var recipient = button.data('whatever') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this)
+    modal.find('.modal-title').text('New message to ' + recipient)
+    modal.find('.modal-body img').attr("src", recipient)
+    modal.find('.modal-body img').attr("alt", recipient)
+  })
+</script>
 </html>
