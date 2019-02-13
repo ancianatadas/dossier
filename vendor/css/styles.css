@@ -55,4 +55,12 @@ a:active {
 }
 .modal-lg {
   max-width: 1000px !important;
+  background: #000000 !important;
+}
+.modal-body {
+  background: #000000 !important;
+}
+.close {
+  color: #000000 !important;
+  opacity: .99;
 }
